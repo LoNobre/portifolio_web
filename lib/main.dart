@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -23,19 +22,25 @@ class MainApp extends StatelessWidget {
             ),
           ),
           GoRoute(
-            path: '/telaA',
+            path: '/users',
             pageBuilder: (context, state) => const MaterialPage(
-              child: TelaA(),
+              child: User(),
             ),
           ),
           GoRoute(
-            path: '/telaA/telaB',
-            pageBuilder: (context, state) => const MaterialPage(
-              child: TelaB(),
-            ),
-          ),
-        ]
+            path: '/users/details/:id',
+            pageBuilder: (context, state) {
+              String id = state.pathParameters['id']!;
+              return MaterialPage(
+                child: Details(
+                  id: id,
+                ),
+              );
+            },
+          )
+        ],
     );
+
     return MaterialApp.router(
       theme: ThemeData.dark(),
       routerDelegate: router.routerDelegate,
@@ -57,8 +62,8 @@ class TelaInicial extends StatelessWidget {
       ),
       body: Center(
         child: TextButton(
-            onPressed: () => GoRouter.of(context).go('/telaA'),
-            child: Text('VAI PRA TELA A!')),
+            onPressed: () => GoRouter.of(context).go('/users'),
+            child: Text('VAI PRA TELA DE USUÁRIOS')),
       ),
     );
   }
@@ -71,15 +76,15 @@ class User extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tela A'),
+        title: const Text(' TELA DE USUÁRIOS'),
       ),
       body: Column(
         children: [
           const Center(
-              child: Text('Estamos na Tela A.')),
+              child: Text('Estamos na Tela DE USUÁRIOS.')),
           TextButton(
-              onPressed: () => GoRouter.of(context).go('/users/details'),
-              child: const Text('VAI PARA A TELA ')),
+              onPressed: () => GoRouter.of(context).go('/users/details/id'),
+              child: const Text('VAI PARA A TELA DE DETALHES')),
         ],
       ),
     );
@@ -95,11 +100,9 @@ class Details extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tela detalhes'),
+        title: const Text('DETALHES'),
       ),
-      body: const Center(
-          child: Text(id)),
-    ),
+      body: Center(child: Text(id)),
     );
   }
 }
