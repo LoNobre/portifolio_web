@@ -1,3 +1,3 @@
 # portifolio_web
 
-A new Flutter project.
+Nesse projeto consiste no desenvolvimento de um portifólio web pessoal em Dart/Flutter
