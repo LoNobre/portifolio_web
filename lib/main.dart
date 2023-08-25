@@ -108,7 +108,7 @@ class InformationsCollege extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TELA DE PROJETOS'),
+        title: const Text('TELA DE INFORMAÇÕES ACADEMICAS'),
       ),
       body: Column(
         children: [
