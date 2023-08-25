@@ -47,7 +47,7 @@ class MainApp extends StatelessWidget {
             ),
           ),
           GoRoute(
-            path: '/informationsCollege.dart',
+            path: '/informationsCollege',
             pageBuilder: (context, state) => const MaterialPage(
               child: InformationsCollege(),
             ),

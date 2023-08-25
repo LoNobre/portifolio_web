@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'components/customWidgets.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -9,12 +9,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Tela inicial'),
-      ),
-      body: Center(
-        child: TextButton(
-            onPressed: () => GoRouter.of(context).go('/'),
-            child: Text('Tela inicial')),
+      appBar: CustomWidgets().getAppBarMenu("Tela inicial", context),
+      body: const Center (
+        child: Text("Body Tela inicial"),
       ),
     );
   }

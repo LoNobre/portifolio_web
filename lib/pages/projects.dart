@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'components/customWidgets.dart';
 
 class Projects extends StatelessWidget{
   const Projects({super.key});
@@ -7,16 +7,9 @@ class Projects extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TELA DE PROJETOS'),
-      ),
-      body: Column(
-        children: [
-          const Center(
-              child: Text('Estamos na tela de projetos realizados')),
-          TextButton(onPressed: () => GoRouter.of(context).go('/projects'),
-              child: const Text('VAI PARA A TELA DE PROJETOS')),
-        ],
+      appBar: CustomWidgets().getAppBarMenu("Projetos", context),
+      body: const Center (
+        child: Text("Body Projetos"),
       ),
     );
   }
