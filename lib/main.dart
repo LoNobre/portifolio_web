@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import 'pages/about.dart';
 import 'pages/contacts.dart';
-import 'pages/description.dart';
+import 'pages/skills.dart';
 import 'pages/home.dart';
 import 'pages/informationsCollege.dart';
 import 'pages/projects.dart';
@@ -41,13 +41,13 @@ class MainApp extends StatelessWidget {
             ),
           ),
           GoRoute(
-            path: '/description',
+            path: '/skills',
             pageBuilder: (context, state) => const MaterialPage(
-              child: Description(),
+              child: Skills(),
             ),
           ),
           GoRoute(
-            path: '/informationsCollege',
+            path: '/informationsCollege.dart',
             pageBuilder: (context, state) => const MaterialPage(
               child: InformationsCollege(),
             ),
