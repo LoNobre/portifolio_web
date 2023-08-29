@@ -8,6 +8,7 @@ import 'pages/skills.dart';
 import 'pages/home.dart';
 import 'pages/informationsCollege.dart';
 import 'pages/projects.dart';
+import 'pages/courses.dart';
 
 void main() {
   setUrlStrategy(PathUrlStrategy());
@@ -56,6 +57,12 @@ class MainApp extends StatelessWidget {
             path: '/about',
             pageBuilder: (context, state) => const MaterialPage(
               child: About(),
+            ),
+          ),
+          GoRoute(
+            path: '/courses',
+            pageBuilder: (context, state) => const MaterialPage(
+              child: Courses(),
             ),
           ),
         ],

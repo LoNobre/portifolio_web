@@ -7,28 +7,20 @@ class CustomWidgets {
       title: Text(title),
       actions: [
         TextButton(
-            onPressed: () => GoRouter.of(context).go('/'),
-            child: const Text("Tela Inicial"),
+          child: const Text("Telegram"),
+          onPressed: () { },
         ),
         TextButton(
-          onPressed: () => GoRouter.of(context).go('/projects'),
-          child: const Text("Projetos"),
+          child: const Text("LinkedIn"),
+          onPressed: () { },
         ),
         TextButton(
-          onPressed: () => GoRouter.of(context).go('/about'),
-          child: const Text("Sobre"),
+          child: const Text("E-mail"),
+          onPressed: () { },
         ),
         TextButton(
-          onPressed: () => GoRouter.of(context).go('/informationsCollege'),
-          child: const Text("Formação acadêmica"),
-        ),
-        TextButton(
-          onPressed: () => GoRouter.of(context).go('/skills'),
-          child: const Text("Habilidades"),
-        ),
-        TextButton(
-          onPressed: () => GoRouter.of(context).go('/contacts'),
-          child: const Text("Contatos"),
+          child: const Text("GitHub"),
+          onPressed: () { },
         ),
       ],
     );
