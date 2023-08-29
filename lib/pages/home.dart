@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
                       backgroundColor: Colors.red,
                       elevation: 15,
                       shadowColor: Colors.grey),
-                  child: Text(
+                  child: const Text(
                     'Projetos',
                     style: TextStyle(
                       color: Colors.black,
@@ -40,7 +40,7 @@ class _HomeState extends State<Home> {
                       backgroundColor: Colors.red,
                       elevation: 15,
                       shadowColor: Colors.grey),
-                  child: Text(
+                  child: const Text(
                     'Formação acadêmica',
                     style: TextStyle(
                       color: Colors.black,
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
                       backgroundColor: Colors.red,
                       elevation: 15,
                       shadowColor: Colors.grey),
-                  child: Text(
+                  child: const Text(
                     'Habilidades',
                     style: TextStyle(
                       color: Colors.black,
@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
                       backgroundColor: Colors.red,
                       elevation: 15,
                       shadowColor: Colors.grey),
-                  child: Text(
+                  child: const Text(
                     'Cursos',
                     style: TextStyle(
                       color: Colors.black,
@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
                       backgroundColor: Colors.red,
                       elevation: 15,
                       shadowColor: Colors.grey),
-                  child: Text(
+                  child: const Text(
                     'Sobre',
                     style: TextStyle(
                       color: Colors.black,

@@ -70,6 +70,7 @@ class MainApp extends StatelessWidget {
 
     return MaterialApp.router(
       theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
       routerDelegate: router.routerDelegate,
       routeInformationParser: router.routeInformationParser,
       routeInformationProvider: router.routeInformationProvider,
