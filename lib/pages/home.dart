@@ -14,6 +14,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: CustomWidgets().getAppBarMenu("Lorrane Nobre", context),
       body: Center (
@@ -26,70 +27,90 @@ class _HomeState extends State<Home> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        elevation: 15,
-                        shadowColor: Colors.grey),
-                    child: const Text(
-                      'Projetos',
-                      style: TextStyle(
-                        color: Colors.black,
+                  SizedBox(
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          elevation: 15,
+                          shadowColor: Colors.grey),
+                      child: const Text(
+                        'Projetos',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
+                      onPressed: () => GoRouter.of(context).go('/projects'),
                     ),
-                    onPressed: () => GoRouter.of(context).go('/projects'),
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        elevation: 15,
-                        shadowColor: Colors.grey),
-                    child: const Text(
-                      'Formação acadêmica',
-                      style: TextStyle(
-                        color: Colors.black,
+                  SizedBox(
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          elevation: 15,
+                          shadowColor: Colors.grey),
+                      child: const Text(
+                        'Formação acadêmica',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
+                      onPressed: () => GoRouter.of(context).go('/informationsCollege'),
                     ),
-                    onPressed: () => GoRouter.of(context).go('/informationsCollege'),
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        elevation: 15,
-                        shadowColor: Colors.grey),
-                    child: const Text(
-                      'Habilidades',
-                      style: TextStyle(
-                        color: Colors.black,
+                  SizedBox(
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          elevation: 15,
+                          shadowColor: Colors.grey),
+                      child: const Text(
+                        'Habilidades',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
+                      onPressed: () => GoRouter.of(context).go('/skills'),
                     ),
-                    onPressed: () => GoRouter.of(context).go('/skills'),
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        elevation: 15,
-                        shadowColor: Colors.grey),
-                    child: const Text(
-                      'Cursos',
-                      style: TextStyle(
-                        color: Colors.black,
+                  SizedBox(
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          elevation: 15,
+                          shadowColor: Colors.grey),
+                      child: const Text(
+                        'Cursos',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
+                      onPressed: () => GoRouter.of(context).go('/courses'),
                     ),
-                    onPressed: () => GoRouter.of(context).go('/courses'),
                   ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        elevation: 15,
-                        shadowColor: Colors.grey),
-                    child: const Text(
-                      'Sobre',
-                      style: TextStyle(
-                        color: Colors.black,
+                  SizedBox(
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          elevation: 15,
+                          shadowColor: Colors.grey),
+                      child: const Text(
+                        'Sobre',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
                       ),
+                      onPressed: () => GoRouter.of(context).go('/about'),
                     ),
-                    onPressed: () => GoRouter.of(context).go('/about'),
                   ),
                 ],
               ),
