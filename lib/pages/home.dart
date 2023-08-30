@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomWidgets().getAppBarMenu("Lorrane Nobre - Portifólio", context),
+      appBar: CustomWidgets().getAppBarMenu("Lorrane Nobre", context),
       body: Center (
         child: Container(
           padding: EdgeInsets.all(32.0),
