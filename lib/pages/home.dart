@@ -17,79 +17,84 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: CustomWidgets().getAppBarMenu("Lorrane Nobre - Portifólio", context),
       body: Center (
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      elevation: 15,
-                      shadowColor: Colors.grey),
-                  child: const Text(
-                    'Projetos',
-                    style: TextStyle(
-                      color: Colors.black,
+        child: Container(
+          padding: EdgeInsets.all(32.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        elevation: 15,
+                        shadowColor: Colors.grey),
+                    child: const Text(
+                      'Projetos',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
+                    onPressed: () => GoRouter.of(context).go('/projects'),
                   ),
-                  onPressed: () => GoRouter.of(context).go('/projects'),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      elevation: 15,
-                      shadowColor: Colors.grey),
-                  child: const Text(
-                    'Formação acadêmica',
-                    style: TextStyle(
-                      color: Colors.black,
+                  TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        elevation: 15,
+                        shadowColor: Colors.grey),
+                    child: const Text(
+                      'Formação acadêmica',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
+                    onPressed: () => GoRouter.of(context).go('/informationsCollege'),
                   ),
-                  onPressed: () => GoRouter.of(context).go('/informationsCollege'),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      elevation: 15,
-                      shadowColor: Colors.grey),
-                  child: const Text(
-                    'Habilidades',
-                    style: TextStyle(
-                      color: Colors.black,
+                  TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        elevation: 15,
+                        shadowColor: Colors.grey),
+                    child: const Text(
+                      'Habilidades',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
+                    onPressed: () => GoRouter.of(context).go('/skills'),
                   ),
-                  onPressed: () => GoRouter.of(context).go('/skills'),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      elevation: 15,
-                      shadowColor: Colors.grey),
-                  child: const Text(
-                    'Cursos',
-                    style: TextStyle(
-                      color: Colors.black,
+                  TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        elevation: 15,
+                        shadowColor: Colors.grey),
+                    child: const Text(
+                      'Cursos',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
+                    onPressed: () => GoRouter.of(context).go('/courses'),
                   ),
-                  onPressed: () => GoRouter.of(context).go('/courses'),
-                ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      elevation: 15,
-                      shadowColor: Colors.grey),
-                  child: const Text(
-                    'Sobre',
-                    style: TextStyle(
-                      color: Colors.black,
+                  TextButton(
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        elevation: 15,
+                        shadowColor: Colors.grey),
+                    child: const Text(
+                      'Sobre',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
+                    onPressed: () => GoRouter.of(context).go('/about'),
                   ),
-                  onPressed: () => GoRouter.of(context).go('/about'),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
