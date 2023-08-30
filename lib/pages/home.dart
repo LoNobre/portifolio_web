@@ -17,103 +17,49 @@ class _HomeState extends State<Home> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: CustomWidgets().getAppBarMenu("Lorrane Nobre", context),
-      body: Center (
-        child: Container(
-          padding: EdgeInsets.all(32.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
+      body: Center(
+        child: SizedBox (
+          height: size.height * 0.7,
+          width: size.width * 0.7,
+          child: Row(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  SizedBox(
-                    height: 40,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          elevation: 15,
-                          shadowColor: Colors.grey),
-                      child: const Text(
-                        'Projetos',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
+              const Expanded(flex: 3,
+                child: Column(
+                  children: [
+                    Expanded(flex: 4,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          CircleAvatar(
+                            radius: 180,
+                            backgroundImage: ExactAssetImage("assets/images/profile.jpg"),
+                          ),
+                        ],
                       ),
-                      onPressed: () => GoRouter.of(context).go('/projects'),
+                  ),
+                  Expanded(flex: 1,
+                    child: Center(
+                      child: Text("Lorrane Nobre",
+                        style: TextStyle(
+                            fontSize: 36,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white70),
+                      ),
                     ),
                   ),
-                  SizedBox(
-                    height: 40,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          elevation: 15,
-                          shadowColor: Colors.grey),
-                      child: const Text(
-                        'Formação acadêmica',
+                  Expanded(flex: 2,
+                    child: Center(
+                      child: Text("Engenheira da Computação, \ndesenvolvedora mobile e \nUX Designer.",
                         style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
+                            fontSize: 32,
+                            color: Colors.white70),
                       ),
-                      onPressed: () => GoRouter.of(context).go('/informationsCollege'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 40,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          elevation: 15,
-                          shadowColor: Colors.grey),
-                      child: const Text(
-                        'Habilidades',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
-                      ),
-                      onPressed: () => GoRouter.of(context).go('/skills'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 40,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          elevation: 15,
-                          shadowColor: Colors.grey),
-                      child: const Text(
-                        'Cursos',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
-                      ),
-                      onPressed: () => GoRouter.of(context).go('/courses'),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 40,
-                    child: TextButton(
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.red,
-                          elevation: 15,
-                          shadowColor: Colors.grey),
-                      child: const Text(
-                        'Sobre',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
-                      ),
-                      onPressed: () => GoRouter.of(context).go('/about'),
                     ),
                   ),
                 ],
+                ),
               ),
+              Expanded(flex: 7, child: Container(color: Colors.orange)),
             ],
           ),
         ),

@@ -20,6 +20,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
+    const Image(image: AssetImage('assets;background.png'));
     final router = GoRouter(
       initialLocation: '/',
         routes: [
