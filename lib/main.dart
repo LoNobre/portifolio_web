@@ -3,7 +3,6 @@ import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:go_router/go_router.dart';
 
 import 'pages/about.dart';
-import 'pages/contacts.dart';
 import 'pages/skills.dart';
 import 'pages/home.dart';
 import 'pages/informationsCollege.dart';
@@ -34,12 +33,6 @@ class MainApp extends StatelessWidget {
             path: '/projects',
             pageBuilder: (context, state) => const MaterialPage(
               child: Projects(),
-            ),
-          ),
-          GoRoute(
-            path: '/contacts',
-            pageBuilder: (context, state) => const MaterialPage(
-              child: Contacts(),
             ),
           ),
           GoRoute(
