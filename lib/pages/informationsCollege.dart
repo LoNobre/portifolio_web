@@ -21,6 +21,7 @@ class _InformationsCollegeState extends State<InformationsCollege> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -66,8 +67,112 @@ class _InformationsCollegeState extends State<InformationsCollege> {
           ),
         ],
       ),
-      body: const Center (
-        child: Text("Body Formação academica"),
+      body: Column (
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: SizedBox(
+              height: size.height * 0.8,
+              width: size.width * 0.7,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Text('Formação acadêmica',
+                        style: TextStyle(
+                          fontSize: size.width * 0.035,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 6,
+                      child: Row(
+                        children: [
+                          Expanded(flex: 2,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  radius: MediaQuery.of(context).size.width * 0.04,
+                                  backgroundImage: ExactAssetImage("assets/images/logo_computacao.jpg"),
+                                ),
+                                CircleAvatar(
+                                  radius: MediaQuery.of(context).size.width * 0.04,
+                                  backgroundImage: ExactAssetImage("assets/images/logo_ufpa.jpg"),
+                                ),
+                                CircleAvatar(
+                                  radius: MediaQuery.of(context).size.width * 0.04,
+                                  backgroundImage: ExactAssetImage("assets/images/logo_eetepa.jpg"),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(flex: 2,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text('Atual',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width * 0.02,
+                                  ),
+                                ),
+                                Text('2023',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width * 0.02,
+                                  ),
+                                ),
+                                Text('2015',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width * 0.02,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(flex: 7,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text('Mestranda no Programa de Pós Graduação em Ciência da Computação - Universidade Federal do Pará',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: size.width * 0.015
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text('Bacharelado em Engenharia da Computação - Universidade Federal do Pará',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width * 0.015,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                Text('Técnico em Informática - EEETEPA Icoaraci',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size.width * 0.015,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+            ),
+          ),
+        ],
       ),
     );
   }
