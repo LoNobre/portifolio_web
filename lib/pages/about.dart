@@ -68,26 +68,7 @@ class About extends StatefulWidget{
           ),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: SizedBox(
-              height: size.height * 0.8,
-              width: size.width * 0.7,
-              child: Column(
-                children: [
-                  Expanded(flex: 1, child: Container(color: Colors.purple,),),
-                  Expanded(flex: 1, child: Container(color: Colors.orange,),),
-                  Expanded(flex: 3, child: Container(color: Colors.blueAccent,),),
-                  Expanded(flex: 1, child: Container(color: Colors.green,),),
-                  Expanded(flex: 3, child: Container(color: Colors.yellow,),),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
+
     );
   }
 }

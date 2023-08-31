@@ -22,6 +22,7 @@ class _SkillsState extends State<Skills> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -67,8 +68,32 @@ class _SkillsState extends State<Skills> {
           ),
         ],
       ),
-      body: const Center (
-        child: Text("Body Habilidades"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: SizedBox(
+              height: size.height * 0.8,
+              width: size.width * 0.7,
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Text('Habilidades',
+                      style: TextStyle(
+                        fontSize: size.width * 0.035,
+                      ),
+                    ),
+                  ),
+                  Expanded(flex: 1, child: Container(color: Colors.orange,),),
+                  Expanded(flex: 3, child: Container(color: Colors.blueAccent,),),
+                  Expanded(flex: 1, child: Container(color: Colors.green,),),
+                  Expanded(flex: 3, child: Container(color: Colors.yellow,),),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
