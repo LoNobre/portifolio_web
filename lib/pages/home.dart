@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
           width: size.width * 0.7,
           child: Row(
             children: [
-              const Expanded(flex: 3,
+              Expanded(flex: 3,
                 child: Column(
                   children: [
                     Expanded(flex: 4,
@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           CircleAvatar(
-                            radius: 180,
+                            radius: MediaQuery.of(context).size.width * 0.09,
                             backgroundImage: ExactAssetImage("assets/images/profile.jpg"),
                           ),
                         ],
@@ -39,9 +39,10 @@ class _HomeState extends State<Home> {
                   ),
                   Expanded(flex: 1,
                     child: Center(
+                      heightFactor: MediaQuery.of(context).size.width * 0.001,
                       child: Text("Lorrane Nobre",
                         style: TextStyle(
-                            fontSize: 36,
+                            fontSize: size.width * 0.023,
                             fontWeight: FontWeight.bold,
                             color: Colors.white70),
                       ),
@@ -49,9 +50,10 @@ class _HomeState extends State<Home> {
                   ),
                   Expanded(flex: 2,
                     child: Center(
+                      heightFactor: MediaQuery.of(context).size.width * 0.001,
                       child: Text("Engenheira da Computação, \ndesenvolvedora mobile e \nUX Designer.",
                         style: TextStyle(
-                            fontSize: 32,
+                            fontSize: size.width * 0.015,
                             color: Colors.white70),
                       ),
                     ),
@@ -60,24 +62,30 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Expanded(flex: 7,
-                child: Center(
-                  child: SizedBox(
-                    height: 40,
-                    width: 80,
-                    child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    textAlign: TextAlign.justify,
-                      style: TextStyle(
-                          color: Colors.white70,
-                          fontSize: 36
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: SizedBox(
+                        height: size.height * 0.4,
+                        width: size.width * 0.45,
+                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                          textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontSize: size.width * 0.02,
+                            ),
+                        ),
                       ),
                     ),
-                  ),
-                  ),
+                  ],
+                ),
               ),
             ],
-          ),
         ),
       ),
+    ),
     );
   }
 }
