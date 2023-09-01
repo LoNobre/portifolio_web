@@ -117,18 +117,21 @@ class _InformationsCollegeState extends State<InformationsCollege> {
                               children: [
                                 Text('Atual',
                                   style: TextStyle(
+                                    color: Colors.white70,
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.02,
                                   ),
                                 ),
                                 Text('2023',
                                   style: TextStyle(
+                                    color: Colors.white70,
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.02,
                                   ),
                                 ),
                                 Text('2015',
                                   style: TextStyle(
+                                    color: Colors.white70,
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.02,
                                   ),
@@ -143,6 +146,7 @@ class _InformationsCollegeState extends State<InformationsCollege> {
                               children: [
                                 Text('Mestranda no Programa de Pós Graduação em Ciência da Computação - Universidade Federal do Pará',
                                   style: TextStyle(
+                                      color: Colors.white70,
                                       fontWeight: FontWeight.bold,
                                       fontSize: size.width * 0.015
                                   ),
@@ -150,6 +154,7 @@ class _InformationsCollegeState extends State<InformationsCollege> {
                                 ),
                                 Text('Bacharelado em Engenharia da Computação - Universidade Federal do Pará',
                                   style: TextStyle(
+                                    color: Colors.white70,
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.015,
                                   ),
@@ -157,6 +162,7 @@ class _InformationsCollegeState extends State<InformationsCollege> {
                                 ),
                                 Text('Técnico em Informática - EEETEPA Icoaraci',
                                   style: TextStyle(
+                                    color: Colors.white70,
                                     fontWeight: FontWeight.bold,
                                     fontSize: size.width * 0.015,
                                   ),
