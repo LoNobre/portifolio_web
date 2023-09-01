@@ -68,7 +68,7 @@ class _ProjectsState extends State<Projects> {
         ],
       ),
       body: const Center (
-        child: Text("Body Projetos"),
+        child: Text("Em desenvolvimento..."),
       ),
     );
   }
