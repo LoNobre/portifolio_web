@@ -70,10 +70,11 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: SizedBox (
-              height: size.height * 0.8,
+              height: size.height * 0.75,
               width: size.width * 0.7,
               child: Row(
                 children: [
@@ -91,20 +92,8 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                         ),
-                        Expanded(flex: 1,
-                          child: Center(
-                            heightFactor: MediaQuery.of(context).size.width * 0.001,
-                            child: Text("Lorrane Nobre",
-                              style: TextStyle(
-                                  fontSize: size.width * 0.023,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white70),
-                            ),
-                          ),
-                        ),
                         Expanded(flex: 2,
                           child: Center(
-                            heightFactor: MediaQuery.of(context).size.width * 0.001,
                             child: Text("Engenheira da Computação, \ndesenvolvedora mobile e \nUX Designer.",
                               style: TextStyle(
                                   fontSize: size.width * 0.015,
@@ -115,29 +104,47 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                  Expanded(flex: 7,
+                  Expanded(flex: 6,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        if (MediaQuery.of(context).size.width < 1000)
-                          Expanded(flex: 2, child: Container()),
-                        Expanded(flex: 4, child: Container(
-                          child: Center(
-                            child: SizedBox(
-                              height: size.height * 0.4,
-                              width: size.width * 0.45,
-                              child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-                                textAlign: TextAlign.justify,
-                                style: TextStyle(
-                                  color: Colors.white70,
-                                  fontSize: size.width * 0.02,
+                        Center(
+                          child: SizedBox(
+                            height: size.height * 0.5,
+                            width: size.width * 0.6,
+                            child: (
+                            Column(
+                              children: [
+                                Expanded(flex: 1,
+                                  child: Text("Lorrane Nobre",
+                                    style: TextStyle(
+                                      fontSize: size.width * 0.035,
+                                    ),
                                 ),
-                              ),
+                                ),
+                                Expanded(flex: 1, child: Container(),
+                                ),
+                                Expanded(flex: 5,
+                                  child: Container(
+                                    child: Center(
+                                      child: SizedBox(
+                                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                                          textAlign: TextAlign.justify,
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                            fontSize: size.width * 0.018,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
                             ),
                           ),
-                        ),
-                        ),
+                        )
+
                       ],
                     ),
                   ),
