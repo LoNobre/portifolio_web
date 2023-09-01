@@ -85,10 +85,66 @@ class _SkillsState extends State<Skills> {
                       ),
                     ),
                   ),
-                  Expanded(flex: 1, child: Container(color: Colors.orange,),),
-                  Expanded(flex: 3, child: Container(color: Colors.blueAccent,),),
-                  Expanded(flex: 1, child: Container(color: Colors.green,),),
-                  Expanded(flex: 3, child: Container(color: Colors.yellow,),),
+                  Expanded(flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text('Soft Skills',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: size.width * 0.025,
+                            fontWeight: FontWeight.w600,
+                        ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(flex: 3, child: Container(
+                    child: Center(
+                      child: SizedBox(
+                        height: size.height * 0.5,
+                        width: size.width * 0.75,
+                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: size.width * 0.02,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ),
+                  Expanded(flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text('Hard Skills',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontSize: size.width * 0.025,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(flex: 3, child: Container(
+                    child: Center(
+                      child: SizedBox(
+                        height: size.height * 0.5,
+                        width: size.width * 0.75,
+                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: size.width * 0.02,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ),
                 ],
               ),
             ),
