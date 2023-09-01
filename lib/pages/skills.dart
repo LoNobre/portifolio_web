@@ -92,23 +92,23 @@ class _SkillsState extends State<Skills> {
                         Text('Soft Skills',
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            fontSize: size.width * 0.025,
+                            fontSize: size.width * 0.023,
                             fontWeight: FontWeight.w600,
                         ),
                         ),
                       ],
                     ),
                   ),
-                  Expanded(flex: 3, child: Container(
+                  Expanded(flex: 2, child: Container(
                     child: Center(
                       child: SizedBox(
-                        height: size.height * 0.5,
+                        height: size.height * 0.45,
                         width: size.width * 0.75,
-                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                           textAlign: TextAlign.justify,
                           style: TextStyle(
                             color: Colors.white70,
-                            fontSize: size.width * 0.02,
+                            fontSize: size.width * 0.018,
                           ),
                         ),
                       ),
@@ -122,28 +122,68 @@ class _SkillsState extends State<Skills> {
                         Text('Hard Skills',
                           textAlign: TextAlign.left,
                           style: TextStyle(
-                            fontSize: size.width * 0.025,
+                            fontSize: size.width * 0.023,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  Expanded(flex: 3, child: Container(
+                  Expanded(flex: 2, child: Container(
                     child: Center(
                       child: SizedBox(
-                        height: size.height * 0.5,
+                        height: size.height * 0.45,
                         width: size.width * 0.75,
-                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                        child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
                           textAlign: TextAlign.justify,
                           style: TextStyle(
                             color: Colors.white70,
-                            fontSize: size.width * 0.02,
+                            fontSize: size.width * 0.018,
                           ),
                         ),
                       ),
                     ),
                   ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 40,
+                                    child: TextButton(
+                                      style: TextButton.styleFrom(
+                                          backgroundColor: Colors.deepPurple,
+                                          elevation: 15,
+                                          shadowColor: Colors.grey),
+                                      child: const Text(
+                                        'Tela inicial',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      onPressed: () => GoRouter.of(context).go('/'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

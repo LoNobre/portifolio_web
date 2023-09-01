@@ -121,6 +121,46 @@ class About extends StatefulWidget{
                       ],
                     ),
                   ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: <Widget>[
+                                  SizedBox(
+                                    height: 40,
+                                    child: TextButton(
+                                      style: TextButton.styleFrom(
+                                          backgroundColor: Colors.deepPurple,
+                                          elevation: 15,
+                                          shadowColor: Colors.grey),
+                                      child: const Text(
+                                        'Tela inicial',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      onPressed: () => GoRouter.of(context).go('/'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ]
               )
             )
