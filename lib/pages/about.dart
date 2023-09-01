@@ -68,6 +68,66 @@ class About extends StatefulWidget{
           ),
         ],
       ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: (
+            SizedBox(
+              height: size.height * 0.8,
+              width: size.width * 0.7,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Text('Quem é a Lorrane?',
+                      style: TextStyle(
+                        fontSize: size.width * 0.035,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 7,
+                    child: Row(
+                      children: [
+                        Expanded(flex: 3,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  radius: MediaQuery.of(context).size.width * 0.09,
+                                  backgroundImage: ExactAssetImage("assets/images/about.jpg"),
+                                ),
+                              ],
+                            ),
+                          ),
+                        Expanded(flex: 4, child: Container(
+                          child: Center(
+                            child: SizedBox(
+                              height: size.height * 0.4,
+                              width: size.width * 0.45,
+                              child: Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                  color: Colors.white70,
+                                  fontSize: size.width * 0.018,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]
+              )
+            )
+            ),
+          )
+        ],
+      ),
 
     );
   }
